@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* 3D Depth Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Raised Slab Shadows */
+.shadow-3d-card {
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 16px -4px rgba(0, 0, 0, 0.08),
+    0 24px 38px -12px rgba(0, 0, 0, 0.08),
+    0 6px 0 0 #e2e8f0;
+}
+
+.shadow-3d-card-hover {
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 14px 28px -6px rgba(0, 0, 0, 0.12),
+    0 32px 52px -16px rgba(0, 0, 0, 0.1),
+    0 8px 0 0 #cbd5e1;
+}
+
+.shadow-3d-inset {
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.06),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.shadow-3d-badge {
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 3px 0 0 #e2e8f0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Hide Leaflet OpenStreetMap contributors as requested */
+.leaflet-control-attribution {
+  display: none !important;
+}
